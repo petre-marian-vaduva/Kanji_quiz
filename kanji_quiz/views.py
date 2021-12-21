@@ -31,6 +31,6 @@ def portuguese_values(request, kanji):
 def portuguese_values_by_number(request, kanji):
     kanji_keys = list(kanji_dict.keys())
     path_redirected = reverse('portuguese_values', args=[
-        kanji_keys[kanji]
+        kanji_keys[kanji-1]
     ])
     return HttpResponseRedirect(path_redirected)
