@@ -8,10 +8,10 @@
     <title>Kanji list</title>
 </head>
 <body>
-    <ul>
+    <ol>
         {% for kanji in kanji_keys %}
-    <li><a href=''>{{ kanji }}</a></li>
+    <li><a href='{% url "portuguese_values" kanji%}'>{{ kanji }}</a></li>
         {% endfor %}
-</ul>
+    </ol>
 </body>
 </html>

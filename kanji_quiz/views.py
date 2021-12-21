@@ -16,10 +16,15 @@ kanji_dict = {
 }
 
 
-
-
 def index(request):
     kanji_keys = list(kanji_dict.keys())
     return render(request, 'kanji_quiz/index.html', {
         'kanji_keys': kanji_keys
     })
+
+def portuguese_values(request, kanji):
+    kanji_value = kanji_dict[kanji]
+    return render(request, 'kanji_quiz/portuguese.html', {
+        'kanji_value': kanji_value
+    })
+
