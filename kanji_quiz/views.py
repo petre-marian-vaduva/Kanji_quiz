@@ -15,4 +15,9 @@ kanji_dict = {
     '子': 'criança'
 }
 
+def index(request):
+    return HttpResponse('hello world')
 
+
+def get_kanji(request, kanji):
+    return HttpResponse('hello world')
