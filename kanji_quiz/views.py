@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, reverse
+from django.http import HttpResponse, HttpResponseRedirect
 
 # Create your views here.
 
@@ -28,3 +28,9 @@ def portuguese_values(request, kanji):
         'kanji_value': kanji_value
     })
 
+def portuguese_values_by_number(request, kanji):
+    kanji_keys = list(kanji_dict.keys())
+    path_redirected = reverse('portuguese_values', args=[
+        kanji_keys[kanji]
+    ])
+    return HttpResponseRedirect(path_redirected)
