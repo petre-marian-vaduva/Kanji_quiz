@@ -15,9 +15,11 @@ kanji_dict = {
     '子': 'criança'
 }
 
+
+
+
 def index(request):
-    return HttpResponse('hello world')
-
-
-def get_kanji(request, kanji):
-    return HttpResponse('hello world')
+    kanji_keys = list(kanji_dict.keys())
+    return render(request, 'kanji_quiz/index.html', {
+        'kanji_keys': kanji_keys
+    })
