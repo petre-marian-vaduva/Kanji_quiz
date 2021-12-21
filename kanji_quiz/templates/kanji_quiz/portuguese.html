@@ -3,5 +3,6 @@
 {% block title %}Portuguese{% endblock %}
 
 {% block body %}
-    {{ kanji_value }}
+    {% include 'kanji_quiz/includes/navbar.html' %}
+    <p>{{ kanji_value }}</p>
 {% endblock %}

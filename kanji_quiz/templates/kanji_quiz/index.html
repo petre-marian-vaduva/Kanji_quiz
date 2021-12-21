@@ -5,6 +5,7 @@ Kanji list
 {% endblock %}
 
 {% block body %}
+    {% include 'kanji_quiz/includes/navbar.html' %}
     <ol>
         {% for kanji in kanji_keys %}
     <li><a href='{% url "portuguese_values" kanji%}'>{{ kanji }}</a></li>
