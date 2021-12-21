@@ -15,3 +15,4 @@ kanji_dict = {
     '子': 'criança'
 }
 
+
